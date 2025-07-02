@@ -1,0 +1,94 @@
+/* Custom styles to override header layout */
+header {
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 30px;
+}
+
+.logo {
+    text-align: center;
+    flex: 0 0 auto;
+    margin: 0 40px;
+}
+
+.logo img {
+    height: 60px; /* Tăng kích thước logo từ 40px lên 60px */
+}
+
+.main-menu, .sub-menu {
+    display: flex;
+    gap: 30px; /* Tăng khoảng cách giữa các mục menu */
+    align-items: center;
+    flex: 1;
+    white-space: nowrap;
+}
+
+.main-menu {
+    justify-content: flex-end;
+}
+
+.sub-menu {
+    justify-content: flex-start;
+}
+
+.main-menu li a, .sub-menu li a {
+    font-size: 14px;
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+/* Responsive fixes */
+@media (max-width: 1200px) {
+    .main-menu, .sub-menu {
+        gap: 20px;
+    }
+    
+    .logo {
+        margin: 0 20px;
+    }
+    
+    .logo img {
+        height: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    nav {
+        gap: 15px;
+    }
+    
+    .main-menu, .sub-menu {
+        gap: 15px;
+    }
+    
+    .main-menu li a, .sub-menu li a {
+        font-size: 12px;
+    }
+    
+    .logo img {
+        height: 45px;
+    }
+}
+
+/* Vẫn giữ nguyên style cũ cho mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-menu, .sub-menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .logo {
+        margin: 10px 0;
+    }
+} 
